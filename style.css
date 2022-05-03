@@ -1,0 +1,321 @@
+/* ============ Font Exo ================= */
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,400;0,600;1,500&display=swap');
+
+/*================== VARIABLES CSS ==================*/
+:root{
+    /* Colors */
+    --darker-blue:#010e2f;
+    --dark-blue: #01172F;
+    --light-blue:#446DF6;
+    --cyan:#E9FFF9;
+    --red:#D9042B;
+    --yellow:#FFD23F;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: var(--darker-blue);
+    color: var(--cyan);
+    font-family: 'Exo', sans-serif;
+}
+
+.centerGameBoard{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.game-board-red{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--red);
+    width: 1150px;
+    height: 750px;
+    border-radius: 1%;
+    position: relative;
+}
+
+.game-board-blue {
+    background-color: var(--dark-blue);
+    width: 900px;
+    height: 600px;
+    padding: 50px;
+    position: relative;
+}
+
+#player1{
+    position: absolute;
+    font-size: 60px;
+    left: 8.5%;
+    top: 13%;
+}
+
+#player2{
+    position: absolute;
+    font-size: 60px;
+    right: 8.5%;
+    top: 13%;
+}
+
+.activePlayer{
+    position: absolute;
+    color: var(--yellow);
+    top: 10% !important;
+}
+
+.winner{
+    top: 10% !important;
+    animation: winner .5s infinite;
+}
+
+#scorePlayer1, #scorePlayer2{
+    color: var(--red);
+    font-size: 50px;
+}
+
+#scorePlayer1{
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+}
+
+#scorePlayer2{
+    position: absolute;
+    top: 50%;
+    right: 18%;
+    transform: translate(-50%, -50%);
+}
+
+/* ================== Dice ===================== */
+.dice{
+    display: none;
+    color: var(--light-blue);
+    font-size: 200px;
+ }
+
+ .centerDice{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 500px;
+ }
+
+.visible{
+    display: block;
+}
+
+.invisible{
+    display: none;
+}
+
+.animationDice{
+    animation: diceAnimation .20s;
+}
+
+
+/*==================== Roll Btn/ Reset Btn =======================*/
+
+.button{
+    font-size: 35px;
+    border-radius: 50px;
+    padding: 10px 20px;
+    background-color: var(--red);
+    color: var(--cyan);
+    border: none;
+    font-weight: 500;
+    position: absolute;
+    left: 50%;
+    top: 85%; 
+    transform: translate(-50%, -50%);
+    
+}
+.button:hover{
+    color: var(--red);
+    background-color: var(--cyan);
+    cursor: pointer;
+    transition: .8s;
+}
+
+
+
+/* =================== Gear Icon ================= */
+.fa-gear{
+    position: absolute;
+    font-size: 65px;
+    cursor: pointer;
+    left: 30px;
+}
+.fa-gear:hover{
+    transform: scale(115%);
+    transition: .5s ease-in-out;
+}
+
+
+/* =================== Info Icon ================= */
+.fa-circle-info{
+    position: absolute;
+    font-size: 65px;
+    color: var(--cyan);
+    right: 30px;
+    cursor: pointer;
+}
+.fa-circle-info:hover{
+    transform: scale(115%);
+    transition: .5s ease-in-out;
+}
+
+/* =============== Info Card & Settings Card =============== */
+.infoCard, .settingsCard{
+    background-color: var(--dark-blue);
+    width: 900px;
+    height: 600px;
+    padding: 50px;
+    position: relative;
+}
+
+.infoCard h1, .settingsCard h1{
+    color: var(--yellow);
+    font-size: 75px;
+    position: absolute;
+    left: 50%; 
+    top: 20%; 
+    transform: translate(-50%, -50%);
+}
+
+.infoCard p{
+    font-size: 25px;
+    position: absolute;
+    top: 45%;
+    left: 16.5%;
+}
+
+.infoCard .fa-x, .settingsCard .fa-x{
+    position: absolute;
+    font-size: 35px;
+    left: 50%;
+    top: 85%;
+    transform: translate(-50%,-50%);
+    cursor: pointer;
+    border: 2px solid var(--cyan);
+    border-radius: 50%;
+    padding: 15px 19px;
+}
+.infoCard .fa-x:hover, .settingsCard .fa-x:hover{
+    color: var(--light-blue);
+    transition: .3s ease-in;
+    border: 2px solid var(--light-blue);
+}
+
+.settingsCard, .inputCenter{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.settingsCard input{
+    width: 285px;
+    height: 50px; 
+    background-color: var(--dark-blue);
+    color: var(--cyan);
+    font-size: 20px;
+    border: none;
+    border-bottom: 2px solid var(--cyan);
+    outline: none;
+}
+
+.settingsCard input::placeholder{
+    color: var(--cyan);
+    font-size: 45px;
+}
+
+/* ============================== Start Button ============================== */
+
+#centerBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; 
+}
+
+#start-btn{
+    position: relative;
+    border: 2px solid var(--red);
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    color: var(--cyan);  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+    font-size: 95px;
+    font-weight: 400;
+    background-color: var(--darker-blue);
+    cursor: pointer;
+    user-select: none;
+    margin: 0 auto;
+}
+
+#start-btn::before{
+    content: "";
+    border: 2px solid var(--red);
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    border-radius: 50%;
+    box-shadow: 0 0 40px var(--red);
+    transition: .3s;
+    animation: buttonAnimation 2.5s infinite;
+}
+
+@keyframes buttonAnimation{
+    0%{
+        box-shadow: 0 0 40px var(--red);
+    }
+    50%{
+        box-shadow: 0 0 80px var(--red);
+    }
+    100% {
+        box-shadow: 0 0 40px var(--red);
+    }
+}
+
+@keyframes diceAnimation{
+    from{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(10deg);
+    }
+    75%{
+        transform: rotate(-10deg);
+    }
+    to{
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes winner {
+    from{
+        color: var(--yellow);
+    }
+    25%{
+        color: var(--red);
+    }
+    50%{
+        color:var(--light-blue);
+    }
+    to{
+        color:var(--yellow);
+    }
+}
