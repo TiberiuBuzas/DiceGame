@@ -7,7 +7,7 @@
     --darker-blue:#010e2f;
     --dark-blue: #01172F;
     --light-blue:#446DF6;
-    --cyan:#E9FFF9;
+    --cyan:#e9fff9;
     --red:#D9042B;
     --yellow:#FFD23F;
 }
@@ -50,21 +50,22 @@ body{
     position: relative;
 }
 
+
 #player1{
     position: absolute;
     font-size: 60px;
-    left: 8.5%;
+    left: 10%; 
     top: 13%;
 }
 
 #player2{
     position: absolute;
     font-size: 60px;
-    right: 8.5%;
+    right: 10%; 
     top: 13%;
-}
+} 
 
-.activePlayer{
+ .activePlayer{
     position: absolute;
     color: var(--yellow);
     top: 10% !important;
@@ -186,7 +187,7 @@ body{
     font-size: 75px;
     position: absolute;
     left: 50%; 
-    top: 20%; 
+    top: 18%; 
     transform: translate(-50%, -50%);
 }
 
@@ -214,28 +215,43 @@ body{
     border: 2px solid var(--light-blue);
 }
 
-.settingsCard .inputCenter{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+#settingsMessage{
+    display: none;
+    font-size: 25px;
+    position: absolute;
+    top: 46%;
+    left: 16.5%;
 }
 .settingsCard input{
-    width: 285px;
+    display: block;
+    width: 225px;
     height: 50px; 
     background-color: var(--dark-blue);
     color: var(--cyan);
-    font-size: 20px;
+    font-size: 45px;
     border: none;
     border-bottom: 2px solid var(--cyan);
     outline: none;
 }
 
 .settingsCard input::placeholder{
-    color: var(--cyan);
+    color: rgba(233, 255, 249,.6);
     font-size: 45px;
+    
+}
+
+#inputPlayer1{
+    position: absolute;
+    top: 38%;
+    left: 3%;
+    transform: translate(50%,50%);
+}
+
+#inputPlayer2{
+    position: absolute;
+    top: 38%;
+    right: 3%;
+    transform: translate(-50%,50%);
 }
 
 /* ============================== Start Button ============================== */

@@ -17,10 +17,12 @@
                 <i class="fa-solid fa-circle-info" id="infoIcon"></i>
 
                 <div class="game-board-blue">
-                    
-                        <h1 id="player1" class="">Player 1</h1>  
-                        <h1 id="player2" class="">Player 2</h1>
-                    
+
+                        <div class="centerPlayers">
+                            <h1 id="player1" class="">Player1</h1>  
+                            <h1 id="player2" class="">Player2</h1>
+                        </div>
+
                         <h2 id="scorePlayer1">0</h2> 
                         <h2 id="scorePlayer2">0</h2>
                         
@@ -38,17 +40,16 @@
                         <button id="resetBtn" class="button invisible">Reset Game</button>
                 </div>
                 <div class="infoCard invisible">
-                    <h1>Info</h1>
+                    <h1>Info</h1> 
                     <p>Roll the Dice. The player who gets 21 first wins. Enjoy! 😁</p>
                     <i class="fa-solid fa-x"></i>
                 </div>
                 <div class="settingsCard invisible">
                     <h1>Settings</h1>
-                    <div class="inputCenter">
-                        <input type="text" id="player1" placeholder="Player1"><br>
-                        <input type="text" id="player2" placeholder="Player2"><br>
-                    </div>
+                    <input type="text" id="inputPlayer1" placeholder="Player1"><br>
+                    <input type="text" id="inputPlayer2" placeholder="Player2"><br>
                     <i class="fa-solid fa-x"></i>
+                    <p id="settingsMessage">The names must be between 4 and 10 characters!</p>
                 </div>
             </div>
         </div>
