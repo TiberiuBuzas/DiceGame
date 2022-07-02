@@ -1,5 +1,6 @@
 # DiceGame
-A Dice Game built with HTML, CSS and JavaScript. Inspired by Scrimba.com
+A Dice Game built with HTML, CSS and JavaScript. Inspired by Scrimba.com.
+<br>
 Live Website: https://tiberiubuzas-dice-game.netlify.app/
 
 
